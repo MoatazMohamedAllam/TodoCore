@@ -68,9 +68,10 @@ namespace TodoAPI
                 RequireHttpsMetadata = false,
                 AutomaticAuthenticate = true,
                 AutomaticChallenge = true,
-                ApiSecret = "dataSecret",
-                ApiName = "data",
-                //AllowedScopes = new List<string> { "data", "datascope" },
+            //    ApiSecret = "dataSecret",
+            //    ApiName = "data",
+                AllowedScopes = new List<string> { "data", "datascope", "api" },
+            
                 SupportedTokens = SupportedTokens.Both,
             });
 

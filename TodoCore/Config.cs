@@ -77,7 +77,6 @@ namespace TodoCore
                     ClientName = "Angular Client",
                     AllowedGrantTypes = GrantTypes.ImplicitAndClientCredentials,
                     AllowAccessTokensViaBrowser = true,
-                    AccessTokenType = AccessTokenType.Reference,
                     AccessTokenLifetime = 864000,
                     AlwaysIncludeUserClaimsInIdToken = true,
 

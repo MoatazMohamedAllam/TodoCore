@@ -32,13 +32,11 @@ namespace TodoAPI.Controllers
         }
 
         [HttpGet]
-        [Route("Action")]
-        public string GetInfo()
+        [Route("GetInfo")]
+        public IActionResult GetInfo()
         {
             Console.WriteLine("############################################################################");
-            var claim = User.Claims.Where(x => x.Type == "sub").SingleOrDefault();
-            return claim.Value;
-            //return new JsonResult(from c in User.Claims select new { c.Type, c.Value}); 
+            return new JsonResult(from c in User.Claims select new { c.Type, c.Value}); 
         }
 
         // GET: api/values
