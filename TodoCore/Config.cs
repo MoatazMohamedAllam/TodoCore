@@ -60,7 +60,6 @@ namespace TodoCore
                     ClientId = "emailpass.client",
                     ClientName = "API Client",
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
-
                     ClientSecrets =
                     {
                         new Secret("secret".Sha256())
@@ -68,7 +67,7 @@ namespace TodoCore
                     AllowedScopes = {
                         "api",
                         IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.Profile
                     }
                 },
                  new Client
@@ -77,7 +76,7 @@ namespace TodoCore
                     ClientName = "Angular Client",
                     AllowedGrantTypes = GrantTypes.ImplicitAndClientCredentials,
                     AllowAccessTokensViaBrowser = true,
-                    AccessTokenLifetime = 864000,
+                    AccessTokenLifetime = 86400,
                     AlwaysIncludeUserClaimsInIdToken = true,
 
                     RedirectUris = {"http://localhost:3000"},

@@ -64,7 +64,7 @@ namespace TodoAPI
 
             app.UseIdentityServerAuthentication(new IdentityServerAuthenticationOptions
             {
-                Authority = "http://localhost:5000",
+                Authority = "http://192.168.43.73:5000",
                 RequireHttpsMetadata = false,
                 AutomaticAuthenticate = true,
                 AutomaticChallenge = true,
